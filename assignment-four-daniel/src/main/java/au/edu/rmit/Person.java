@@ -37,7 +37,7 @@ public class Person {
     }
 
     // This is the main constructer, for when you create an new person with details
-    // This one should be primarilt used as to avoid the need for setters and getters
+    // This one should be primarily used as to avoid the need for setters and getters
     public Person(String personID, String firstName, String lastName, String address, 
         String birthdate, HashMap<Date, Integer> demeritPoints, boolean isSuspended) 
     {
@@ -76,6 +76,7 @@ public class Person {
             File file = new File(filename);
             PrintWriter pw = new PrintWriter(file);
             pw.write("");
+            pw.close();
         }
         catch (IOException e) {
             System.out.println("Error wiping file...\n" + e.getMessage());
